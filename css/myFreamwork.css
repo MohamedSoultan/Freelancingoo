@@ -1,0 +1,482 @@
+/* Here create Component useful to help me  */
+
+html {
+  /* top make defult fons size 1rem = 10px */
+  font-size: 62.5%;
+}
+/* Container to mange entire page has some padding right and left */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+p {
+  line-height: 1.5;
+  font-weight: 400;
+}
+/* Mobile */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Tablets */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* laptop */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Above laptop */
+@media (min-width: 1500) {
+  .container {
+    width: 1400px;
+  }
+}
+
+/********************************************** Start grid */
+
+.grid {
+  display: grid;
+}
+/************** Coulms */
+.grid_col_1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid_col_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid_col_3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.grid_col_4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/************** Rows */
+.grid_rows_1 {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.grid_rows_2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.grid_rows_3 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.grid_rows_4 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.grid_col_auto {
+  grid-template-columns: auto;
+}
+.grid_row_auto {
+  grid-template-rows: auto;
+}
+/************** Gap */
+.gap_6 {
+  gap: 0.6rem;
+}
+.gap_12 {
+  gap: 1.2rem;
+}
+.gap_24 {
+  gap: 2.4rem;
+}
+.gap_32 {
+  gap: 3.2rem;
+}
+.gap_48 {
+  gap: 4.8rem;
+}
+.gap_64 {
+  gap: 6.4rem;
+}
+.gap_86 {
+  gap: 8.6rem;
+}
+/********************************************** End grid */
+
+/********************************************** Start flex */
+
+.flex {
+  display: flex;
+}
+.justify_center {
+  justify-content: center;
+}
+.flex_justify_center {
+  display: flex;
+  justify-content: center;
+}
+.flex_justify_between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex_justify_around {
+  display: flex;
+  justify-content: space-around;
+}
+.flex_justify_end {
+  display: flex;
+  justify-content: flex-end;
+}
+.flex_dir_col {
+  display: flex;
+  flex-direction: column;
+}
+.flex_dir_row {
+  display: flex;
+  flex-direction: row;
+}
+.flex_justify_align_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex_justify_align_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex_justify_align_around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex_align {
+  display: flex;
+  align-items: center;
+}
+.align_center {
+  align-items: center;
+}
+.text_center {
+  text-align: center;
+}
+/********************************************** End flex */
+
+/********************************************** Start display */
+.d_block {
+  display: block;
+}
+.d_none {
+  display: none;
+}
+.d_inline_block {
+  display: inline-block;
+}
+/********************************************** End dsiplay */
+
+/********************************************** Start padding */
+/************** Top */
+.pd_top_12 {
+  padding-top: 1.2rem;
+}
+.pd_top_16 {
+  padding-top: 1.6rem;
+}
+.pd_top_24 {
+  padding-top: 2.4rem;
+}
+.pd_top_32 {
+  padding-top: 3.2rem;
+}
+.pd_top_48 {
+  padding-top: 4.8rem;
+}
+.pd_top_64 {
+  padding-top: 6.4rem;
+}
+.pd_top_82 {
+  padding-top: 8.2rem;
+}
+.pd_top_96 {
+  padding-top: 9.6rem;
+}
+.pd_top_112 {
+  padding-top: 11.2rem;
+}
+.pd_top_150 {
+  padding-top: 15rem;
+}
+/************** Bottom */
+.pd_bottom_12 {
+  padding-bottom: 1.2rem;
+}
+.pd_bottom_16 {
+  padding-bottom: 1.6rem;
+}
+.pd_bottom_24 {
+  padding-bottom: 2.4rem;
+}
+.pd_bottom_32 {
+  padding-bottom: 3.2rem;
+}
+.pd_bottom_48 {
+  padding-bottom: 4.8rem;
+}
+.pd_bottom_64 {
+  padding-bottom: 6.4rem;
+}
+.pd_bottom_82 {
+  padding-bottom: 8.2rem;
+}
+.pd_bottom_96 {
+  padding-bottom: 9.6rem;
+}
+.pd_bottom_112 {
+  padding-bottom: 11.2rem;
+}
+.pd_bottom_150 {
+  padding-bottom: 15rem;
+}
+/************** Auto  right & left*/
+.pd_R_L_auto {
+  padding-right: auto;
+  padding-left: auto;
+}
+/********************************************** End padding */
+
+/********************************************** Start margin */
+/************** Top */
+.mrg_top_6 {
+  margin-top: 0.6rem;
+}
+.mrg_top_12 {
+  margin-top: 1.2rem;
+}
+.mrg_top_16 {
+  margin-top: 1.6rem;
+}
+.mrg_top_24 {
+  margin-top: 2.4rem;
+}
+.mrg_top_32 {
+  margin-top: 3.2rem;
+}
+.mrg_top_48 {
+  margin-top: 4.8rem;
+}
+.mrg_top_64 {
+  margin-top: 6.4rem;
+}
+.mrg_top_82 {
+  margin-top: 8.2rem;
+}
+.mrg_top_96 {
+  margin-top: 9.6rem;
+}
+.mrg_top_112 {
+  margin-top: 11.2rem;
+}
+.mrg_top_150 {
+  margin-top: 15rem;
+}
+.mrg_top_250 {
+  margin-top: 25rem;
+}
+/************** Bottom */
+.mrg_bottom_6 {
+  margin-bottom: 0.6rem;
+}
+.mrg_bottom_12 {
+  margin-bottom: 1.2rem;
+}
+.mrg_bottom_16 {
+  margin-bottom: 1.6rem;
+}
+.mrg_bottom_24 {
+  margin-bottom: 2.4rem;
+}
+.mrg_bottom_32 {
+  margin-bottom: 3.2rem;
+}
+.mrg_bottom_48 {
+  margin-bottom: 4.8rem;
+}
+.mrg_bottom_64 {
+  margin-bottom: 6.4rem;
+}
+.mrg_bottom_82 {
+  margin-bottom: 8.2rem;
+}
+.mrg_bottom_96 {
+  margin-bottom: 9.6rem;
+}
+.mrg_bottom_112 {
+  margin-bottom: 11.2rem;
+}
+.mrg_bottom_150 {
+  margin-bottom: 15rem;
+}
+.mrg_bottom_250 {
+  margin-bottom: 25rem;
+}
+/************** Auto  right & left*/
+.mrg_R_L_auto {
+  margin-right: auto;
+  padding-left: auto;
+}
+.mrg_auto {
+  margin: auto;
+}
+/********************************************** End margin */
+
+.text_dir_none {
+  text-decoration: none;
+}
+.list_none {
+  list-style: none;
+}
+
+/********************************************** Start colors  */
+.text_white {
+  color: #fff;
+}
+.text_black {
+  color: #000;
+}
+.bg_white {
+  background-color: #fff;
+}
+/********************************************** End colors  */
+/********************************************** Start width & height */
+/************** Width */
+.width_100 {
+  width: 100%;
+}
+.width_75 {
+  width: 75%;
+}
+.width_50 {
+  width: 50%;
+}
+.width_25 {
+  width: 25%;
+}
+.width_auto {
+  width: auto;
+}
+/************** Height */
+.height_100 {
+  height: 100%;
+}
+.height_75 {
+  height: 75%;
+}
+.height_50 {
+  height: 50%;
+}
+.height_25 {
+  height: 25%;
+}
+.height_auto {
+  height: auto;
+}
+.height_100vh {
+  height: 100vh;
+}
+.height_75vh {
+  height: 75vh;
+}
+.height_50vh {
+  height: 50vh;
+}
+.height_25vh {
+  height: 25vh;
+}
+/********************************************** End width & height  */
+
+/********************************************** Start Opacity  */
+.opcy_1 {
+  opacity: 1;
+}
+.opcy_09 {
+  opacity: 0.9;
+}
+.opcy_08 {
+  opacity: 0.8;
+}
+.opcy_07 {
+  opacity: 0.7;
+}
+.opcy_06 {
+  opacity: 0.6;
+}
+.opcy_05 {
+  opacity: 0.5;
+}
+.opcy_04 {
+  opacity: 0.4;
+}
+.opcy_03 {
+  opacity: 0.3;
+}
+.opcy_02 {
+  opacity: 0.2;
+}
+.opcy_01 {
+  opacity: 0.1;
+}
+.opcy_0 {
+  opacity: 0;
+}
+/********************************************** End Opacity  */
+
+/********************************************** Start Font-size  */
+.font_12 {
+  font-size: 1.2rem;
+}
+.font_12 {
+  font-size: 1.6rem;
+}
+.font_18 {
+  font-size: 1.8rem;
+}
+.font_24 {
+  font-size: 2.4rem;
+}
+.font_32 {
+  font-size: 3.2rem;
+}
+.font_48 {
+  font-size: 4.8rem;
+}
+.font_64 {
+  font-size: 6.4rem;
+}
+.font_82 {
+  font-size: 8.2rem;
+}
+.font_96 {
+  font-size: 9.6rem;
+}
+.font_112 {
+  font-size: 11.2rem;
+}
+.font_150 {
+  font-size: 15rem;
+}
+/********************************************** End Font-size  */
