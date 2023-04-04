@@ -59,6 +59,18 @@
   .rightLogin {
     display: none;
   }
+  .nav_addProject {
+    column-gap: 48px;
+  }
+  .container_cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .headRight_addProject {
+    display: block;
+  }
+  .headRight_addProject .toggles {
+    margin-top: 24px;
+  }
 }
 @media (max-width: 850px) {
   .whyContainer {
@@ -152,6 +164,19 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 48px;
   }
+  .container_addProject {
+    grid-template-columns: 1fr;
+    column-gap: 24px;
+  }
+  .container_cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .headRight_addProject {
+    display: flex;
+  }
+  .headRight_addProject .toggles {
+    margin-top: 0;
+  }
 }
 @media (max-width: 578px) {
   .mainHeading {
@@ -217,5 +242,31 @@
   }
   .loginW_text {
     display: none !important ;
+  }
+  .headRight_addProject {
+    display: block;
+  }
+  .headRight_addProject .toggles {
+    margin-top: 24px;
+  }
+  .titleFilter {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 415px) {
+  .pagination {
+    grid-template-columns: 1fr;
+  }
+  .container_cards {
+    grid-template-columns: 1fr;
+  }
+  .toggles {
+    display: block;
+  }
+  .toggles .online_sellers {
+    margin-bottom: 12px;
+  }
+  .card_services_addProject {
+    max-width: 100%;
   }
 }

@@ -191,6 +191,9 @@ p {
 
 /********************************************** Start padding */
 /************** Top */
+.pd_top_6 {
+  padding-top: 0.6rem;
+}
 .pd_top_12 {
   padding-top: 1.2rem;
 }

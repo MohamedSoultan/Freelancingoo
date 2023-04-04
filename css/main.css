@@ -45,7 +45,7 @@
   outline: none;
   border: none;
   font-size: inherit;
-  margin-left: 8px;  
+  margin-left: 8px;
 }
 
 .lastCol {
@@ -421,7 +421,8 @@
 .oneInput label {
   margin-bottom: 4px;
 }
-.inputLogin {
+.inputLogin,
+select {
   padding: 10px 6px;
   border-radius: 6px;
   border: 2px solid #8ad480;
@@ -430,6 +431,7 @@
   width: 100%;
   transition: var(--transition);
   background-color: inherit;
+  font-size: 18px;
 }
 
 .eyeInput {
@@ -449,7 +451,7 @@
   color: var(--mainTextColor);
   /* border: 1px solid var(--mainColor); */
   border-radius: 50px;
-  padding:8px;
+  padding: 8px;
   cursor: pointer;
   /* opacity: 0.8; */
   transition: var(--transition);
@@ -462,3 +464,150 @@
   background-color: #1da1f2;
 }
 /* End login */
+
+/* Add project section */
+.container_addProject {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  color: var(--textColor);
+  column-gap: 64px;
+}
+.addWorkBtn,
+.headRight_addProject {
+  background-color: var(--mainTextColor);
+  border-radius: 8px;
+  color: inherit;
+  padding: 12px;
+}
+.titleFilter {
+  font-weight: 500;
+  font-size: 24px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0px;
+  right: 0;
+  bottom: 0px;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--mainTextColor);
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: var(--mainColor);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--mainColor);
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Crads */
+.image_card_service {
+  border-radius: 12px 12px 0 0;
+  cursor: pointer;
+}
+
+/* .content_card {
+  background-color: #8ad480;
+  padding: 0 12px 0;
+  border-radius: 0 0 12px 12px;
+  cursor: pointer;
+  color: var(--textColor);
+} */
+.description_card_service {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.footerCard_service {
+  border-top: 1px solid var(--textColor);
+}
+
+.nameFreelancer {
+  font-weight: 500;
+  line-height: 0.8;
+  font-size: 18px;
+}
+.positionFreelancer {
+  font-size: 14px;
+  color: rgba(2, 17, 0, 0.7);
+}
+
+/* Pagination  */
+
+.btn_pagination {
+  border: 1px solid var(--mainColor);
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.btn_pagination:hover {
+  background-color: var(--mainColor);
+}
+
+.btn_pagination:hover .btn-icon {
+  stroke: #fff;
+}
+
+.btn-icon {
+  height: 24px;
+  width: 24px;
+  stroke: var(--mainColor);
+}
+
+.page-link:link,
+.page-link:visited {
+  font-size: 18px;
+  color: var(--textColor);
+  text-decoration: none;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-link:hover,
+.page-link:active,
+.page-link.page-link--current {
+  background-color: var(--mainColor);
+  color: #fff;
+}
+
+.dots {
+  color: var(--textColor);
+}
