@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Start Import css files -->
     <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/main-ar.css" />
     <link type="text/css" rel="stylesheet" href="css/globaleProperties.css" />
     <link type="text/css" rel="stylesheet" href="css/myFreamwork.css" />
     <link type="text/css" rel="stylesheet" href="css/media.css" />
@@ -21,14 +22,14 @@
     <!-- End Import font style -->
 
     <link rel="favicon" href="" />
-    <title>Flreelane</title>
+    <title>موقع فريلانسر</title>
   </head>
   <body class="font_12">
     <header class="hero text_white" id="hero">
       <div class="nav_container">
         <nav class="navgation opcy_0 flex_justify_align_between">
           <div class="firstCol flex_justify_align_between gap_24">
-            <p class="logo">Logo</p>
+            <p class="logo">شعار</p>
             <!-- <div class="heroInput flex_justify_align_between">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -55,11 +56,13 @@
 
           <ul class="orderList flex_justify_align_between gap_32">
             <li class="list_none text_center active">
-              <a class="text_white text_dir_none" href="./index.html">Home</a>
+              <a class="text_white text_dir_none" href="./index.html"
+                >الرئيسية</a
+              >
             </li>
             <li class="list_none text_center">
               <a class="text_white text_dir_none" href="./addProject.html"
-                >Add Project</a
+                >اضافة مشروع</a
               >
             </li>
             <!-- <li class="list_none">
@@ -69,11 +72,11 @@
             </li> -->
             <li class="list_none">
               <a class="text_white text_dir_none" href="./portfolio.html">
-                Portfolio</a
+                معرض الاعامل</a
               >
             </li>
             <li class="list_none flex_justify_center gap_6">
-              <a class="text_white text_dir_none" href="#"> More</a>
+              <a class="text_white text_dir_none" href="#"> المذيد</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14px"
@@ -141,28 +144,27 @@
           </div>
         </nav>
       </div>
-      <div id="main_content">
-        <div class="left_main_content opcy_0 width_50">
-          <h2 class="praimaryHeading animateHead mrg_bottom_16">
-            Welcome To <br />
-            <span>freelance services</span>
+      <div class="hero_content grid_col_2 gap_24 align_center container">
+        <div class="left_main_content opcy_0">
+          <h2 class="praimaryHeading mrg_bottom_16">
+            مرحبا بك في <br />
+            <span>فريلانسر للخدمات</span>
           </h2>
           <p class="discription_main_content mrg_bottom_32">
-            Get Your Business Done Online <br />
-            By The Best Professional Freelancers Easily And Safely For All
-            Parties
+            احصل على عملك التجاري عبر الإنترنت <br />
+            من قبل أفضل العاملين المستقلين المحترفين بسهولة وأمان للجميع حفلات
           </p>
           <form class="searchBar_main_content flex mrg_bottom_12">
             <input
               id="mainSearch"
               type="search"
               class="heroSearchBar text_black"
-              placeholder="Try 'buildiny mobile app'"
+              placeholder=" جرب ' تطوير تطبيق هاتف'"
             />
-            <button type="submit" class="heroBtn mainBTN">Search</button>
+            <button type="submit" class="heroBtn mainBTN">ابحث</button>
           </form>
           <div class="first_action flex_align gap_24">
-            <button class="heroBtn registerBtn">Register Now</button>
+            <button class="heroBtn registerBtn">تسجيل الان</button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="48px"
@@ -181,11 +183,11 @@
                 d="M216.32 334.44l114.45-69.14a10.89 10.89 0 000-18.6l-114.45-69.14a10.78 10.78 0 00-16.32 9.31v138.26a10.78 10.78 0 0016.32 9.31z"
               />
             </svg>
-            <p class="watchVideo_text font_32">Watch Video</p>
+            <p class="watchVideo_text font_24">شاهد الفيديو</p>
           </div>
         </div>
-        <div class="right_main_content opcy_0">
-          <img src="./assets/home.png" alt="" />
+        <div class="right_hero_content">
+          <img class="width_100" src="./assets/home.png" alt="" />
         </div>
       </div>
     </header>
@@ -194,9 +196,7 @@
         class="howItWork mrg_top_150 pd_bottom_24 container"
         id="howItWork"
       >
-        <h2 class="mainHeading mrg_bottom_64 flex_justify_center">
-          HoW We Work
-        </h2>
+        <h2 class="mainHeading mrg_bottom_64 flex_justify_center">كيف نعمل</h2>
         <ul
           class="howItWork_orderList flex_justify_align_center gap_48 mrg_bottom_48"
         >
@@ -204,37 +204,35 @@
             <a
               class="item_howItWork active text_dir_none font_24 pd_bottom_12"
               href="#"
-              >Services</a
+              >الخدامات</a
             >
           </li>
           <li class="list_none">
             <a
               class="item_howItWork text_dir_none font_24 pd_bottom_12"
               href="#"
-              >Projects</a
+              >الاعمال</a
             >
           </li>
           <li class="list_none">
             <a
               class="item_howItWork text_dir_none font_24 pd_bottom_12"
               href="#"
-              >Contests</a
+              >مسابقات</a
             >
           </li>
         </ul>
-        <div class="conainer_cards">
+        <div class="container_cards_howItWork">
           <div class="card_service" id="card1" data-serv="service">
             <h3 class="title_card font_24 mrg_bottom_24">
-              Front-end Developers! 1
+              مطورو الواجهة الأمامية! 1
             </h3>
             <p class="description_card font_16">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              reiciendis dolorum dolore quia repudiandae temporibus. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Sit reiciendis
-              dolorum dolore quia repudiandae temporibus. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sit reiciendis dolorum dolore
-              quia repudiandae temporibus. reiciendis dolorum dolore quia
-              repudiandae temporibus.
+              الشركة نفسها هي شركة ناجحة للغاية. فليكن برفض الآلام بسبب زمن
+              الرفض. لوريم إيبسوم يجب أن يتبع الألم دهون المطور. فليُرفض وجع
+              الالم بسبب اوقات الرفض. الزبون ذكي جدا سيتم متابعة adipisicing.
+              فليكن رفض الألم مع الألم لأنه في زمن الطلاق برفض الآلام بسبب الألم
+              أوقات الطلاق.
             </p>
             <div class="goto_href">
               <svg
@@ -255,23 +253,17 @@
             </div>
           </div>
           <div class="card_service" id="card2" data-serv="service">
-            <h3 class="title_card font_24 mrg_bottom_24">
-              Back-end Developers! 2
-            </h3>
+            <h3 class="title_card font_24 mrg_bottom_24">مطورو الخلفية! 2</h3>
             <p class="description_card font_16">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              reiciendis dolorum dolore quia repudiandae temporibus. Lorem
-              ipsum, dolor sit amet Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Perferendis, earum consequatur sapiente
-              asperiores reprehenderit totam voluptatum nihil eius id ipsam quod
-              nulla, cum, modi facere! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Distinctio molestias assumenda, rem debitis
-              adipisci voluptas? ipsum, dolor sit amet Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Perferendis, earum consequatur
-              sapiente asperiores reprehenderit totam voluptatum nihil eius id
-              ipsam quod nulla, cum, modi facere! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Distinctio molestias assumenda, rem
-              debitis adipisci voluptas?
+              الشركة نفسها هي شركة ناجحة للغاية. فليكن برفض الآلام بسبب زمن
+              الرفض. مرحباً جدا ، الألم عظيم adipisicing النخبة. من خلال حملهم ،
+              سينجحون في الحكمة سوف ينتقد كل الملذات بقسوة أكبر لا توجد طريقة
+              للقيام بذلك! Lorem ipsum dolor sit amet، consectetur adipisicing
+              النخبة. التمييز في تحمل المشكلة ، أنت مدين بالشيء هل تسعدني إنه
+              مؤلم للغاية سيتم متابعة adipisicing. تحملهم وعواقبهم الحكيم ينتهر
+              كل الملذات التي ليست منها حقيقة أنه لا توجد طريقة للقيام بذلك!
+              الزبون سعيد جدا سيتبعه adipisicing المطور. تميز لتحمل المتاعب ،
+              المسألة هل يجب ان تسعد
             </p>
             <div class="goto_href">
               <svg
@@ -292,11 +284,12 @@
             </div>
           </div>
           <div class="card_service" id="card3" data-serv="service">
-            <h3 class="title_card font_24 mrg_bottom_24">UI designer! 3</h3>
+            <h3 class="title_card font_24 mrg_bottom_24">
+              مصمم واجهة المستخدم! 3
+            </h3>
             <p class="description_card font_16">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              reiciendis dolorum dolore quia repudiandae temporibus. reiciendis
-              dolorum dolore quia repudiandae temporibus.
+              الشركة نفسها هي شركة ناجحة للغاية. فليكن برفض الآلام بسبب زمن
+              الرفض. الرافضين وجع الالم بسبب اوقات الرفض.
             </p>
             <div class="goto_href">
               <svg
@@ -318,16 +311,14 @@
           </div>
           <div class="card_service" id="card4" data-serv="service">
             <h3 class="title_card font_24 mrg_bottom_24">
-              Mobile Applcation! 4
+              تطبيق الهاتف المحمول! 4
             </h3>
             <p class="description_card font_16">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              reiciendis dolorum dolore quia repudiandae temporibus. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Sit reiciendis
-              dolorum dolore quia repudiandae temporibus. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sit reiciendis dolorum dolore
-              quia repudiandae temporibus. reiciendis dolorum dolore quia
-              repudiandae temporibus.
+              الشركة نفسها هي شركة ناجحة للغاية. فليكن برفض الآلام بسبب زمن
+              الرفض. لوريم إيبسوم يجب أن يتبع الألم دهون المطور. فليُرفض وجع
+              الالم بسبب اوقات الرفض. الزبون ذكي جدا سيتم متابعة adipisicing.
+              فليكن رفض الألم مع الألم لأنه في زمن الطلاق برفض الآلام بسبب الألم
+              أوقات الطلاق.
             </p>
             <div class="goto_href">
               <svg
@@ -348,14 +339,12 @@
             </div>
           </div>
           <div class="card_service" id="card5" data-serv="service">
-            <h3 class="title_card font_24 mrg_bottom_24">Video Editing 5</h3>
+            <h3 class="title_card font_24 mrg_bottom_24">صناعة فيديو! 5</h3>
             <p class="description_card font_16">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              reiciendis dolorum dolore quia repudiandae temporibus. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Sit reiciendis
-              dolorum dolore quia repudiandae temporibus. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sit reiciendis dolorum dolore
-              quia repudiandae temporibus.
+              الشركة نفسها هي شركة ناجحة للغاية. يجلس برفض الآلام بسبب زمن
+              الرفض. لوريم إيبسوم يجب أن يتبع الألم دهون المطور. الجلوس الرافضين
+              وجع الالم بسبب اوقات الرفض. الزبون ذكي جدا سيتم متابعة
+              adipisicing. الجلوس ورفض الآلام في الألم لأنه في زمن الطلاق
             </p>
             <div class="goto_href">
               <svg
@@ -376,10 +365,12 @@
             </div>
           </div>
           <div class="card_service" id="card6" data-serv="service">
-            <h3 class="title_card font_24 mrg_bottom_24">UX designer ! 6</h3>
+            <h3 class="title_card font_24 mrg_bottom_24">
+              مصمم تجربة المستخدم! 6
+            </h3>
             <p class="description_card font_16">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              reiciendis dolorum dolore quia repudiandae temporibus.
+              تجربة المستخدم هي أهم جزء في تجربة العميل. فليكن برفض الآلام بسبب
+              زمن الرفض. مصمم
             </p>
             <div class="goto_href">
               <svg
@@ -401,16 +392,14 @@
           </div>
           <div class="card_service" id="card7" data-serv="service">
             <h3 class="title_card font_24 mrg_bottom_24">
-              SEO (Search Engine Optimization) ! 7
+              SEO (تحسين محرك البحث)! 7
             </h3>
             <p class="description_card font_16">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              reiciendis dolorum dolore quia repudiandae temporibus. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Sit reiciendis
-              dolorum dolore quia repudiandae temporibus. Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Sit reiciendis dolorum dolore
-              quia repudiandae temporibus. reiciendis dolorum dolore quia
-              repudiandae temporibus.
+              الشركة نفسها هي شركة ناجحة للغاية. فليكن برفض الآلام بسبب زمن
+              الرفض. لوريم إيبسوم يجب أن يتبع الألم دهون المطور. فليُرفض وجع
+              الالم بسبب اوقات الرفض. الزبون ذكي جدا سيتم متابعة adipisicing.
+              فليكن رفض الألم مع الألم لأنه في زمن الطلاق برفض الآلام بسبب الألم
+              أوقات الطلاق.
             </p>
             <div class="goto_href">
               <svg
@@ -434,50 +423,41 @@
       </section>
       <section class="why pd_top_96" id="why">
         <h2 class="mainHeading mrg_bottom_32 flex_justify_center">
-          Why freelance ?
+          لماذا فريلانسر ؟
         </h2>
         <p class="decriprionWhy flex_justify_center font_16 mrg_bottom_64">
-          freelance works to provide a professional and safe environment for
+          يعمل لحسابهم الخاص على توفير بيئة مهنية وآمنة ل
           <br />
-          interaction between entrepreneurs and freelancers through
+          التفاعل بين رواد الأعمال وأصحاب الأعمال الحرة من خلال
         </p>
         <div class="container">
           <div class="whyContainer align_center">
             <div class="whyLeft">
-              <p class="title_businessOwner font_32">Business Owner</p>
+              <p class="title_businessOwner font_32">صاحب العمل</p>
               <ul class="mrg_top_32">
                 <li
                   class="description_businessOwnerlist_none mrg_bottom_24 flex align_center gap_12 font_16"
                 >
                   <span class="cercleBeforText"></span>
-                  <p>
-                    Full guarantee of your rights and outstanding technical
-                    support at your service
-                  </p>
+                  <p>الضمان الكامل لحقوقك والتقنية المتميزة الدعم في خدمتك</p>
                 </li>
                 <li
                   class="description_businessOwnerlist_none mrg_bottom_24 flex align_center gap_12 font_16"
                 >
                   <span class="cercleBeforText"></span>
-                  <p>No additional fees, just pay for your purchases</p>
+                  <p>لا توجد رسوم إضافية ، فقط ادفع مقابل مشترياتك</p>
                 </li>
                 <li
                   class="description_businessOwnerlist_none mrg_bottom_24 flex align_center gap_12 font_16"
                 >
                   <span class="cercleBeforText"></span>
-                  <p>
-                    Enjoy the contests department, the exclusive department in
-                    the arab world
-                  </p>
+                  <p>استمتع بقسم المسابقات ، القسم الحصري في العالم العربي</p>
                 </li>
                 <li
                   class="description_businessOwnerlist_none mrg_bottom_24 flex align_center gap_12 font_16"
                 >
                   <span class="cercleBeforText"></span>
-                  <p>
-                    Various, secure and flexible payment methods suitable for
-                    all countries
-                  </p>
+                  <p>طرق دفع متنوعة وآمنة ومرنة مناسبة لـ كل البلدان</p>
                 </li>
               </ul>
             </div>
@@ -490,36 +470,33 @@
               <img class="width_100" src="./assets/theFlreelane.png" alt="" />
             </div>
             <div class="whyLeft">
-              <p class="title_businessOwner font_32">The Freelancer</p>
+              <p class="title_businessOwner font_32">فريلانسر</p>
               <ul class="mrg_top_32">
                 <li
                   class="description_businessOwnerlist_none mrg_bottom_24 flex align_center gap_12 font_16"
                 >
                   <span class="cercleBeforText"></span>
-                  <p>
-                    Full guarantee of your rights and outstanding technical
-                    support at your service
-                  </p>
+                  <p>الضمان الكامل لحقوقك والتقنية المتميزة الدعم في خدمتك</p>
                 </li>
                 <li
                   class="description_businessOwnerlist_none mrg_bottom_24 flex align_center gap_12 font_16"
                 >
                   <span class="cercleBeforText"></span>
-                  <p>Profits suspension period may be up to two days only</p>
+                  <p>قد تصل فترة تعليق الأرباح إلى يومين فقط</p>
                 </li>
                 <li
                   class="description_businessOwnerlist_none mrg_bottom_24 flex align_center gap_12 font_16"
                 >
                   <span class="cercleBeforText"></span>
-                  <p>freelance platform commission may be up to 10% only</p>
+                  <p>قد تصل عمولة المنصة المستقلة إلى 10٪ فقط</p>
                 </li>
                 <li
                   class="description_businessOwnerlist_none mrg_bottom_24 flex align_center gap_12 font_16"
                 >
                   <span class="cercleBeforText"></span>
                   <p>
-                    Various and easy profit withdrawal methods (paypal /
-                    vodafone cash / bank transfer / and many other means ....)
+                    طرق سحب أرباح متنوعة وسهلة (paypal / فودافون كاش / حوالة
+                    بنكية / والعديد من الوسائل الأخرى ....)
                   </p>
                 </li>
               </ul>
@@ -529,7 +506,7 @@
       </section>
       <section class="plan mrg_top_48 mrg_bottom_48" id="plan">
         <h3 class="mainHeading headPlan flex_justify_center">
-          have a job you want to do?
+          لديك وظيفة تريد القيام بها؟
         </h3>
         <div class="container grid_col_2 align_center">
           <div class="leftPlan">
@@ -550,7 +527,7 @@
                     d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span> Add a project </span>
+                <span> أضف مشروعا </span>
               </li>
               <li class="list_none flex_align">
                 <svg
@@ -568,7 +545,7 @@
                     d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span>Choose the appropriate independent</span>
+                <span>اختر المستقل المناسب</span>
               </li>
 
               <li class="list_none flex_align">
@@ -587,7 +564,7 @@
                     d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span> Receive the project </span>
+                <span> استلام المشروع </span>
               </li>
             </ul>
           </div>
@@ -762,14 +739,14 @@
         <div class="container align_center grid_col_2">
           <div class="leftCta">
             <h1 class="praimaryHeading praimaryHeadingCta pd_bottom_32">
-              Register With Us
+              سجل معنا الان
             </h1>
             <p class="descriptionCta pd_bottom_24 font_18">
-              Enjoy the various departments (contests / projects / services)
-              that provide you with all your needs to grow your business with a
-              selection of the best freelancers nominated by
+              استمتع بالإدارات المختلفة (مسابقات / مشاريع / خدمات) التي توفر لك
+              جميع احتياجاتك لتنمية أعمالك باستخدام اختيار أفضل المستقلين
+              المرشحين من قبل
             </p>
-            <button class="heroBtn heroBtnCta">Register now</button>
+            <button class="heroBtn heroBtnCta">سجل الان</button>
           </div>
           <div class="righttCta">
             <img class="width_100" src="./assets/cta.png" alt="" />
@@ -780,7 +757,7 @@
         <h3
           class="mainHeading mainHeadingRights flex_justify_center pd_bottom_64 mrg_top_48"
         >
-          Rights & Quality of your business
+          حقوق وجودة عملك
         </h3>
         <div class="container grid_col_3 gap_32">
           <div class="right_box">
@@ -789,12 +766,10 @@
               src="./assets/Professional-freelancers.png"
               alt=""
             />
-            <h3 class="title_right_box mrg_bottom_16 font_24">
-              Professional team
-            </h3>
+            <h3 class="title_right_box mrg_bottom_16 font_24">فريق فني</h3>
             <p class="description_right_box font_16">
-              Work with independent experts in all fields you are looking for
-              with personal data and documented identities.
+              اعمل مع خبراء مستقلين في جميع المجالات التي تبحث عنها بالبيانات
+              الشخصية والهويات الموثقة.
             </p>
           </div>
           <div class="right_box">
@@ -804,12 +779,11 @@
               alt=""
             />
             <h3 class="title_right_box mrg_bottom_16 font_24">
-              Financial rights
+              الحقوق المالية
             </h3>
             <p class="description_right_box font_16">
-              The value of the transaction remains in the balance of your
-              account on an independent site until you receive the project
-              yourself.
+              تظل قيمة المعاملة في رصيدك حساب على موقع مستقل حتى تتلقى المشروع
+              نفسك.
             </p>
           </div>
           <div class="right_box">
@@ -818,13 +792,10 @@
               src="./assets/Integrate-profiles.png"
               alt=""
             />
-            <h3 class="title_right_box mrg_bottom_16 font_24">
-              Integrated profiles
-            </h3>
+            <h3 class="title_right_box mrg_bottom_16 font_24">ملامح متكاملة</h3>
             <p class="description_right_box font_16">
-              Personal files for freelancers showing their work, previous
-              evaluations, and an overview of their most important experiences
-              and skills.
+              الملفات الشخصية للمستقلين تظهر عملهم السابق التقييمات ، ولمحة عامة
+              عن أهم تجاربهم والمهارات.
             </p>
           </div>
           <div class="right_box">
@@ -833,22 +804,19 @@
               src="./assets/Guarantee-of-rights.png"
               alt=""
             />
-            <h3 class="title_right_box mrg_bottom_16 font_24">
-              Guarantee of rights
-            </h3>
+            <h3 class="title_right_box mrg_bottom_16 font_24">ضمان الحقوق</h3>
             <p class="description_right_box font_16">
-              Full refund of the project value if you do not receive the agreed
-              work
+              استرداد كامل قيمة المشروع إذا لم تستلم المبلغ المتفق عليه عمل
             </p>
           </div>
           <div class="right_box">
             <img class="mrg_bottom_32" src="./assets/Support-help.png" alt="" />
             <h3 class="title_right_box mrg_bottom_16 font_24">
-              Help & Support
+              المساعدة والدعم
             </h3>
             <p class="description_right_box font_16">
               Our team is available to assist you around the clock at all stages
-              of the project.
+              of the project. 24/7
             </p>
           </div>
         </div>
@@ -857,24 +825,24 @@
         <h3
           class="mainHeading mainHeadingFAQ mrg_bottom_48 flex_justify_center"
         >
-          Frequently Asked Questions !
+          أسئلة مكررة !
         </h3>
         <div class="containerFAQ">
           <div class="leftFAQ">
             <ul
               class="ListFAQ_categories flex_dir_col gap_24 font_24 text_center"
             >
-              <li class="active item_FAQ list_none">General</li>
-              <li class="item_FAQ list_none">Services</li>
-              <li class="item_FAQ list_none">Projects</li>
-              <li class="item_FAQ list_none">Contests</li>
+              <li class="active item_FAQ list_none">عام</li>
+              <li class="item_FAQ list_none">خدامات</li>
+              <li class="item_FAQ list_none">مشاريع</li>
+              <li class="item_FAQ list_none">مسابقات</li>
             </ul>
           </div>
           <div class="rigtFAQ">
             <div class="accordion flex_dir_col gap_24">
               <div class="item">
                 <p class="number_accordion">01</p>
-                <p class="title_accordion">Lorem ipsum dolor sit amet.</p>
+                <p class="title_accordion">ماذه يعني فريلانسر</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon"
@@ -891,15 +859,15 @@
                 </svg>
                 <div class="hidden-box">
                   <p class="description_accordion">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Accusantium dolor at sequi obcaecati cupiditate. Voluptates
-                    repellendus cupiditate aperiam! Incidunt amet quo neque.
+                    العميل نفسه ، سيتمكن العميل من متابعة اكتساب الشركة. أعمت
+                    الرغبة في المتابعة ألم المتهمين. متع سأفتحها برغبة في أن
+                    تنفر! سوف يسقطون في مكانهم مهما حدث.
                   </p>
                 </div>
               </div>
               <div class="item open">
                 <p class="number_accordion">02</p>
-                <p class="title_accordion">Lorem ipsum dolor sit amet.</p>
+                <p class="title_accordion">ماذه يعني فريلانسر</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon"
@@ -916,15 +884,15 @@
                 </svg>
                 <div class="hidden-box">
                   <p class="description_accordion">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Accusantium dolor at sequi obcaecati cupiditate. Voluptates
-                    repellendus cupiditate aperiam! Incidunt amet quo neque.
+                    العميل نفسه ، سيتمكن العميل من متابعة اكتساب الشركة. أعمت
+                    الرغبة في المتابعة ألم المتهمين. متع سأفتحها برغبة في أن
+                    تنفر! سوف يسقطون في مكانهم مهما حدث.
                   </p>
                 </div>
               </div>
               <div class="item">
                 <p class="number_accordion">03</p>
-                <p class="title_accordion">Where are these chairs assembled?</p>
+                <p class="title_accordion">ماذا اذا لم اخذ مالي كاملا</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon"
@@ -941,9 +909,9 @@
                 </svg>
                 <div class="hidden-box">
                   <p class="description_accordion">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Accusantium dolor at sequi obcaecati cupiditate. Voluptates
-                    repellendus cupiditate aperiam! Incidunt amet quo neque.
+                    العميل نفسه ، سيتمكن العميل من متابعة اكتساب الشركة. أعمت
+                    الرغبة في المتابعة ألم المتهمين. متع سأفتحها برغبة في أن
+                    تنفر! سوف يسقطون في مكانهم مهما حدث.
                   </p>
                 </div>
               </div>
@@ -957,18 +925,18 @@
         <div class="contentFooter grid_col_4 gap_24">
           <div class="footerCol">
             <ul class="listCols_footer flex_dir_col gap_12">
-              <p class="headtCol font_18">Help & Support</p>
+              <p class="headtCol font_18">المساعدة والدعم</p>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
             </ul>
           </div>
@@ -976,69 +944,67 @@
             <ul class="listCols_footer flex_dir_col gap_12">
               <p class="headtCol font_18">Freelancer</p>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
             </ul>
           </div>
           <div class="footerCol">
             <ul class="listCols_footer flex_dir_col gap_12">
-              <p class="headtCol font_18">Freelancer blog</p>
+              <p class="headtCol font_18">مدونة فريلانسر</p>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
             </ul>
           </div>
           <div class="footerCol">
-            <p class="headtCol font_18 mrg_bottom_12">Payment Methods</p>
+            <p class="headtCol font_18 mrg_bottom_12">وسائل الدفع</p>
             <ul class="listCols_footer flex gap_12">
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
             </ul>
-            <p class="headtCol font_18 mrg_bottom_12 mrg_top_32">
-              Payment Methods
-            </p>
+            <p class="headtCol font_18 mrg_bottom_12 mrg_top_32">وسائل الدفع</p>
             <ul class="listCols_footer flex gap_12">
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
               <li class="itemsColFooter list_none font_16">
-                <a class="text_dir_none" href="#">Lorem</a>
+                <a class="text_dir_none" href="#">خدمة</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="theEnd flex_justify_align_between mrg_top_48">
           <p class="copyrigt font_18">
-            All rights reserved <span class="rightText">&#174;</span>
-            <span class="data_freelancer">&nbsp; &nbsp;Freelancer 2023</span>
+            كل الحقوق محفزظه <span class="rightText">&#174;</span>
+            <span class="data_freelancer">&nbsp; &nbsp;فريلانسر 2023</span>
           </p>
           <ul class="listSocial_icons flex_justify_center gap_32">
             <li class="icon_social list_none">

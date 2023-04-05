@@ -30,11 +30,11 @@ body {
   --transition: all 0.3s ease;
 }
 .praimaryHeading {
-  font-size: 54px;
+  font-size: 48px;
   font-family: var(--primary--font);
   color: var(--mainColor);
   margin-bottom: 15px;
-  /* margin-left: -10px; */
+  line-height: 1.3;
 }
 .mainHeading {
   font-size: var(--mainHeading);

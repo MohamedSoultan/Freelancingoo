@@ -1,16 +1,4 @@
-.transform_menu:hover span:nth-child(2) {
-  opacity: 0;
-}
-.transform_menu:hover span:first-child,
-.transform_menu:hover span:last-child {
-  top: 6px;
-}
-.transform_menu:hover span:first-child {
-  transform: rotate(135deg);
-}
-.transform_menu:hover span:last-child {
-  transform: rotate(-135deg);
-}
+
 
 .orderList li.active a,
 .orderList li:hover a {

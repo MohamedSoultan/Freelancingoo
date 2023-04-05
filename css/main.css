@@ -52,6 +52,8 @@
   padding-left: 16px;
 }
 .transform_menu {
+  z-index: 1000;
+  display: none;
   margin: 20px auto;
   width: 32px;
   height: 16px;
@@ -76,18 +78,26 @@
 .transform_menu span:last-child {
   top: 16px;
 }
-
+.navgation.active span:nth-child(2) {
+  opacity: 0;
+}
+.navgation.active span:first-child,
+.navgation.active span:last-child {
+  top: 6px;
+}
+.navgation.active span:first-child {
+  transform: rotate(135deg);
+}
+.navgation.active span:last-child {
+  transform: rotate(-135deg);
+}
 /* End navbar */
 /* Start hero section */
-.main_content {
-  position: relative;
-}
-.left_main_content {
-  position: relative;
-  right: 100px;
-  margin-top: 100px;
-  padding: 0 64px;
-  transition: var(--transition);
+
+.right_hero_content {
+  display: flex;
+  justify-self: end;
+  transform: rotateY(180deg);
 }
 .discription_main_content {
   color: var(--pragraphColor);
@@ -132,47 +142,33 @@
   font-family: var(--primary--font);
   margin-bottom: 10px;
 }
-
-.right_main_content {
-  position: absolute;
-}
-.right_main_content {
-  position: absolute;
-  top: 60%;
-  right: 0;
-  transform: translateY(-50%);
-  height: 100vh;
-}
-.right_main_content img {
-  height: 100%;
-  transform: rotateY(180deg);
-}
 /* End hero section */
 
 /* Start How it work */
 
-.conainer_cards {
+.container_cards_howItWork {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));*/
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   transition: var(--transition);
 }
-.item_howItWork {
-  color: var(--mainColor);
+.content_list > div {
+  display: none;
+}
+.content_list > div.active {
+  display: block;
+}
+
+.item_howItWork p {
+  color: var(--textColor);
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: var(--transition);
 }
-
-/* #card3,
-#card5,
-#card1,
-#card4 {
-  position: relative;
-  top: -100px;
-} */
+.item_howItWork.active p {
+  color: var(--mainColor);
+}
 
 #card1 {
   grid-column: 2 /4;
@@ -290,6 +286,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
+  transition: var(--transition);
 }
 .leftFAQ {
   padding: 100px;
@@ -304,12 +301,14 @@
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
   padding: 24px;
 
+  cursor: pointer;
   border-radius: 20px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   column-gap: 24px;
   row-gap: 32px;
   align-items: center;
+  border-top: 2px solid var(--mainColor);
 }
 
 .title_accordion {
@@ -342,7 +341,7 @@
 
 /* OPEN STATE */
 .open {
-  border-top: 2px solid var(--mainColor);
+  border: 2px solid var(--mainColor);
 }
 
 .open .hidden-box {
@@ -352,6 +351,10 @@
 .open .number_accordion,
 .open .title_accordion {
   color: var(--mainColor);
+}
+
+.rigtFAQ .warparr_acc:not(:last-child) {
+  display: none;
 }
 /* End FAQ */
 /* Start footer */

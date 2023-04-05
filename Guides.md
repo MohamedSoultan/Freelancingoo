@@ -27,3 +27,11 @@
 prahraph: 20px
 praimaryHeading: 42px
 generalHeading:38px
+
+media
+1- whach video with DOM
+
+### Search and Filter
+
+1- hero serach
+2- filter with swich toggle
