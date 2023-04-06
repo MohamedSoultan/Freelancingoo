@@ -309,6 +309,9 @@
   row-gap: 32px;
   align-items: center;
   border-top: 2px solid var(--mainColor);
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
 }
 
 .title_accordion {
@@ -342,6 +345,8 @@
 /* OPEN STATE */
 .open {
   border: 2px solid var(--mainColor);
+  max-height: 1000px;
+  transition: max-height 1s ease-in;
 }
 
 .open .hidden-box {
