@@ -1,34 +1,36 @@
+"strict";
 //  Mention elements
-let tabs_howItWork = Array.from(
+const tabs_howItWork = Array.from(
   document.querySelectorAll(".howItWork_orderList .item_howItWork")
 );
 // --
-
-let tabs_howItWork_content = Array.from(
+const navgation = document.querySelector(".navgation");
+const navContainer = document.querySelector(".nav_container");
+// --
+const tabs_howItWork_content = Array.from(
   document.querySelectorAll(".content_list .warrper")
 );
 // --
-
-let ListFAQ_categories = Array.from(document.querySelectorAll(".item_FAQ"));
-let containerFAQ = Array.from(
+const ListFAQ_categories = Array.from(document.querySelectorAll(".item_FAQ"));
+const containerFAQ = Array.from(
   document.querySelectorAll(".rigtFAQ .warparr_acc")
 );
 // --
-
-let accordionOpen = Array.from(document.querySelectorAll(".accordion .item"));
+const toggles = Array.from(document.querySelectorAll(".toggles input"));
 // --
-let navgation = document.querySelector(".navgation");
+const accordionOpen = Array.from(document.querySelectorAll(".accordion .item"));
 // --
 
 // ---------------------------------------------------------------------------------------------------------------
 // Toggle menu
 // ---------------------------------------------------------------------------------------------------------------
-navgation.addEventListener("click", (e) => {
-  navgation.classList.toggle("active");
-});
-
+let transform_menu = document
+  .querySelector(".transform_menu")
+  .addEventListener("click", (e) => {
+    navgation.classList.toggle("active");
+  });
 // --
-let toggleSwicher = Array.from(
+const toggleSwicher = Array.from(
   document.querySelectorAll(".toggles input[type='checkbox'] ")
 );
 // --
@@ -56,16 +58,23 @@ function animateOpacity(element, duration, targetOpacity) {
   updateOpacity();
 }
 // ---------------------------------------------------------------------------------------------------------------
+// Sticky navigtion
+// ---------------------------------------------------------------------------------------------------------------
+window.onscroll = function () {
+  this.scrollY >= 50
+    ? navContainer.classList.add("sticky")
+    : navContainer.classList.remove("sticky");
+};
+//  need to make this function usfull can use in any thing  /////////////////////////////
+// ---------------------------------------------------------------------------------------------------------------
 // Remove all class from toggle menu and add classes to current target and has dataset has same name id content
 // ---------------------------------------------------------------------------------------------------------------
-function handleClasses(pearntNav, pearntContent) {
+function handleClasses(pearntNav, pearntContent, className) {
   pearntNav.forEach((element) => {
     element.addEventListener("click", (ele) => {
-      pearntNav.forEach((e) => {
-        e.classList.remove("active");
-      });
+      removeClassesFromChildren(pearntNav, className);
 
-      element.classList.add("active");
+      element.classList.add(className);
 
       pearntContent.forEach((content) => {
         content.style.display = "none";
@@ -75,33 +84,48 @@ function handleClasses(pearntNav, pearntContent) {
     });
   });
 }
+function removeClassesFromChildren(pearntNav, className) {
+  pearntNav.forEach((e) => {
+    e.classList.remove(className);
+  });
+}
 // ---------------------------------------------------------------------------------------------------------------
-// Add parent function will to remove all class from chlorine and add class to current target
+// Remove All Classes And Add Class To Current Target current target has class remove it else add
 // ---------------------------------------------------------------------------------------------------------------
-function removeAndAddClasess(pearnt, nameClass) {
-  pearnt.forEach((ele) => {
-    ele.addEventListener("click", () => {
-      pearnt.forEach((e) => {
-        e.classList.remove(nameClass);
+const FAQitems = document.querySelectorAll(".item");
+function removeAllClassesAndAddClassToCurrentTarget(pearnt, className) {
+  pearnt.forEach((item) => {
+    item.addEventListener("click", () => {
+      pearnt.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove(className);
+        }
       });
-      ele.classList.add(nameClass);
+      item.classList.toggle(className);
     });
   });
 }
-// toggleSwicher.forEach((ele) => {
-//   ele.addEventListener("click", (e) => {
-//     toggleSwicher.forEach((element) => {
-//       element.removeAttribute("checked");
-//     });
-//     toggleSwicher.forEach((element) => {
-//       element.setAttribute("checked", "");
-//     });
-//   });
-// });
+// ---------------------------------------------------------------------------------------------------------------
+// If child contains class active remove else add it
+// ---------------------------------------------------------------------------------------------------------------
+function toggleActive(pearnt, className) {
+  pearnt.forEach((element) => {
+    element.addEventListener("click", () => {
+      element.classList.toggle(className);
+    });
+  });
+}
+
 // ---------------------------------------------------------------------------------------------------------------
 // Play functions
 // ---------------------------------------------------------------------------------------------------------------
-handleClasses(tabs_howItWork, tabs_howItWork_content);
-handleClasses(ListFAQ_categories, containerFAQ);
-removeAndAddClasess(accordionOpen, "open");
+handleClasses(tabs_howItWork, tabs_howItWork_content, "active");
+handleClasses(ListFAQ_categories, containerFAQ, "active");
+removeAllClassesAndAddClassToCurrentTarget(FAQitems, "open");
 animateOpacity(navgation, 500, 1); // fade in over 1 second
+toggleActive(toggles, "active");
+
+//  plannig to create filtertion swicher ....
+//  1- check when swicher if on result = on  else result = off
+//  2- add atrr to categoreis content and buttons
+//  3- try to use handleClasses fuction has same functionalty

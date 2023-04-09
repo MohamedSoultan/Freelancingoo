@@ -4,7 +4,20 @@
   border-bottom: 1px solid rgb(20, 168, 0, 0.3);
   color: var(--mainColor);
   padding: 4px 32px;
+  transition: var(--transition);
 }
+.nav_container.sticky {
+  backdrop-filter: blur(10px);
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  background-color: rgb(232, 246, 230,0.9);
+  border-bottom: none;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 .nav_container svg {
   color: var(--mainColor);
 }
@@ -311,7 +324,7 @@
   border-top: 2px solid var(--mainColor);
   max-height: 100px;
   overflow: hidden;
-  transition: max-height 1s ease-out;
+  /* transition:  1s ease-in; */
 }
 
 .title_accordion {
@@ -346,7 +359,6 @@
 .open {
   border: 2px solid var(--mainColor);
   max-height: 1000px;
-  transition: max-height 1s ease-in;
 }
 
 .open .hidden-box {
@@ -569,6 +581,11 @@ input:checked + .slider:before {
 .positionFreelancer {
   font-size: 14px;
   color: rgba(2, 17, 0, 0.7);
+}
+.freelancerInfo img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 
 /* Pagination  */
