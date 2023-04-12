@@ -9,7 +9,7 @@
 .nav_container.sticky {
   backdrop-filter: blur(10px);
   /* background-color: rgba(255, 255, 255, 0.9); */
-  background-color: rgb(232, 246, 230,0.9);
+  background-color: rgb(232, 246, 230, 0.9);
   border-bottom: none;
 }
 header {
@@ -41,6 +41,7 @@ header {
   font-size: 38px;
   font-family: var(--primary--font);
   margin-bottom: 15px;
+  z-index: 1001;
 }
 .orderList svg {
   color: var(--textColor);
@@ -166,6 +167,7 @@ header {
   grid-gap: 20px;
   transition: var(--transition);
 }
+
 .content_list > div {
   display: none;
 }
@@ -373,6 +375,7 @@ header {
 .rigtFAQ .warparr_acc:not(:last-child) {
   display: none;
 }
+
 /* End FAQ */
 /* Start footer */
 .footer {
@@ -491,6 +494,15 @@ select {
   grid-template-columns: 300px 1fr;
   color: var(--textColor);
   column-gap: 64px;
+  overflow: hidden;
+  margin-left: 64px;
+}
+.head-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  margin: 64px 0 48px;
+  column-gap: 65px;
+  margin-left: 64px;
 }
 .addWorkBtn,
 .headRight_addProject {
@@ -502,19 +514,20 @@ select {
 .titleFilter {
   font-weight: 500;
   font-size: 24px;
+  /* margin-right: 150px; */
 }
-.switch {
+.toggles .switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 24px;
 }
-.switch input {
+.toggles .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.slider {
+.toggles .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -525,7 +538,7 @@ select {
   transition: 0.4s;
 }
 
-.slider:before {
+.toggles .slider:before {
   position: absolute;
   content: "";
   height: 20px;
@@ -535,19 +548,19 @@ select {
   background-color: var(--mainTextColor);
   transition: 0.4s;
 }
-input:checked + .slider {
+.toggles input:checked + .slider {
   background-color: var(--mainColor);
 }
-input:focus + .slider {
+.toggles input:focus + .slider {
   box-shadow: 0 0 1px var(--mainColor);
 }
-input:checked + .slider:before {
+.toggles input:checked + .slider:before {
   transform: translateX(26px);
 }
-.slider.round {
+.toggles .slider.round {
   border-radius: 34px;
 }
-.slider.round:before {
+.toggles .slider.round:before {
   border-radius: 50%;
 }
 
@@ -557,13 +570,17 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-/* .content_card {
-  background-color: #8ad480;
-  padding: 0 12px 0;
-  border-radius: 0 0 12px 12px;
-  cursor: pointer;
-  color: var(--textColor);
-} */
+.wrapper_container_cards {
+  overflow: hidden !important;
+  position: relative;
+}
+.wrapper_container_cards .container_cards {
+  display: flex;
+  position: relative;
+}
+.wrapper_container_cards .wrapper_card_project {
+  width: 250px;
+}
 .description_card_service {
   font-weight: 500;
   line-height: 1.2;

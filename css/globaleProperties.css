@@ -43,18 +43,15 @@ body {
   margin-bottom: 15px;
 }
 .heroBtn {
+  /* all: unset; */
   padding: 8px 20px;
   border-radius: var(--borderRadius);
-  /* background: none; */
   border: none;
   font-weight: 500;
   letter-spacing: 0.3px;
   font-family: inherit;
   font-size: 18px;
-  /* color: #000; */
   cursor: pointer;
-  /* Temporary background-color */
-  /* background-color: #b9e5b3; */
   transition: 0.3s;
 }
 
@@ -91,4 +88,12 @@ li {
   background-color: transparent;
   border-radius: 50%;
   border: 3px solid var(--mainColor);
+}
+
+
+.disabled {
+  display: none !important;
+}
+.show {
+  display: block !important;
 }

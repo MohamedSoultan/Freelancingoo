@@ -1,102 +1,118 @@
 "strict";
 //  Mention elements
+
+// -- start
+let swichOnline = document.querySelector(".online_sellers input");
+let swichPro = document.querySelector(".pro_servceis input");
+let OnSellers = document.querySelectorAll(".container_cards .onlineServcies");
+let proServceis = document.querySelectorAll(".container_cards .proServceis");
+let allProducts = document.querySelectorAll(
+  ".container_cards .wrapper_card_project"
+);
+// -- end
+
+// -- start
+let toggleMenu = document.querySelector(".transform_menu");
+// -- end
+
+// -- start
+let navgation = document.querySelector(".navgation");
+const navContainer = document.querySelector(".nav_container");
+// -- end
+
+// -- start
 const tabs_howItWork = Array.from(
   document.querySelectorAll(".howItWork_orderList .item_howItWork")
 );
-// --
-const navgation = document.querySelector(".navgation");
-const navContainer = document.querySelector(".nav_container");
-// --
 const tabs_howItWork_content = Array.from(
   document.querySelectorAll(".content_list .warrper")
 );
-// --
+// -- end
+
+// -- start
 const ListFAQ_categories = Array.from(document.querySelectorAll(".item_FAQ"));
 const containerFAQ = Array.from(
   document.querySelectorAll(".rigtFAQ .warparr_acc")
 );
-// --
-const toggles = Array.from(document.querySelectorAll(".toggles input"));
-// --
-const accordionOpen = Array.from(document.querySelectorAll(".accordion .item"));
-// --
+const FAQitems = document.querySelectorAll(".rigtFAQ .item");
+// -- end
 
-// ---------------------------------------------------------------------------------------------------------------
-// Toggle menu
-// ---------------------------------------------------------------------------------------------------------------
-let transform_menu = document
-  .querySelector(".transform_menu")
-  .addEventListener("click", (e) => {
-    navgation.classList.toggle("active");
-  });
-// --
-const toggleSwicher = Array.from(
-  document.querySelectorAll(".toggles input[type='checkbox'] ")
+// -- start
+const containerSwicher = document.querySelectorAll(".toggles input");
+
+// -- start
+const container_cards = Array.from(
+  document.querySelectorAll(".container_cards .wrapper_card_project")
 );
-// --
-// ---------------------------------------------------------------------------------------------------------------
-//  Animate by opacity function
-// ---------------------------------------------------------------------------------------------------------------
-function animateOpacity(element, duration, targetOpacity) {
-  const startOpacity = parseFloat(
-    window.getComputedStyle(element).getPropertyValue("opacity")
-  );
-  const deltaOpacity = targetOpacity - startOpacity;
-  const startTime = performance.now();
-
-  function updateOpacity() {
-    const elapsedTime = performance.now() - startTime;
-    const progress = Math.min(elapsedTime / duration, 1);
-    const opacity = startOpacity + deltaOpacity * progress;
-    element.style.opacity = opacity;
-
-    if (progress < 1) {
-      setTimeout(updateOpacity, 16); // 60 fps
-    }
-  }
-
-  updateOpacity();
+// -- end
+// -- start
+const home = document.getElementById("home");
+const homeAr = document.getElementById("homeAr");
+const addProject = document.getElementById("addProject");
+const portfolio = document.getElementById("portfolio");
+const login = document.getElementById("login");
+// -- end
+if (home) {
 }
+if (homeAr) {
+}
+if (addProject) {
+  toggleActive(swichOnline, swichOnline, "active"); // erorr in main file
+  toggleActive(swichPro, swichPro, "active"); // erorr in main file
+  filterBySwicher(swichPro, allProducts, proServceis); // erorr in main file
+  filterBySwicher(swichOnline, allProducts, OnSellers); // erorr in main file
+}
+if (portfolio) {
+}
+if (login) {
+}
+
 // ---------------------------------------------------------------------------------------------------------------
 // Sticky navigtion
 // ---------------------------------------------------------------------------------------------------------------
-window.onscroll = function () {
-  this.scrollY >= 50
-    ? navContainer.classList.add("sticky")
-    : navContainer.classList.remove("sticky");
-};
-//  need to make this function usfull can use in any thing  /////////////////////////////
+function onScroll(inHighet, addClassTo, removeClassFrom, className) {
+  window.onscroll = () => {
+    this.scrollY >= inHighet
+      ? addClassTo.classList.add(className)
+      : removeClassFrom.classList.remove(className);
+  };
+}
 // ---------------------------------------------------------------------------------------------------------------
 // Remove all class from toggle menu and add classes to current target and has dataset has same name id content
 // ---------------------------------------------------------------------------------------------------------------
 function handleClasses(pearntNav, pearntContent, className) {
   pearntNav.forEach((element) => {
     element.addEventListener("click", (ele) => {
+      // play function remove all classes
       removeClassesFromChildren(pearntNav, className);
 
+      // add class to target element
       element.classList.add(className);
 
+      // remove all content from display
       pearntContent.forEach((content) => {
         content.style.display = "none";
       });
+
+      //  if clicked to target element add dataset = change style
       document.querySelector(ele.currentTarget.dataset.cont).style.display =
         "block";
     });
   });
 }
+// Remove class from all elements
 function removeClassesFromChildren(pearntNav, className) {
   pearntNav.forEach((e) => {
     e.classList.remove(className);
   });
 }
 // ---------------------------------------------------------------------------------------------------------------
-// Remove All Classes And Add Class To Current Target current target has class remove it else add
+// Remove All Classes And Add Class To Current Target , current target has class remove it else add
 // ---------------------------------------------------------------------------------------------------------------
-const FAQitems = document.querySelectorAll(".item");
-function removeAllClassesAndAddClassToCurrentTarget(pearnt, className) {
-  pearnt.forEach((item) => {
+function removeAllClassesAndAddClassToCurrentTarget(allItems, className) {
+  allItems.forEach((item) => {
     item.addEventListener("click", () => {
-      pearnt.forEach((otherItem) => {
+      allItems.forEach((otherItem) => {
         if (otherItem !== item) {
           otherItem.classList.remove(className);
         }
@@ -106,26 +122,31 @@ function removeAllClassesAndAddClassToCurrentTarget(pearnt, className) {
   });
 }
 // ---------------------------------------------------------------------------------------------------------------
-// If child contains class active remove else add it
+// Add toggle class to target element
 // ---------------------------------------------------------------------------------------------------------------
-function toggleActive(pearnt, className) {
-  pearnt.forEach((element) => {
-    element.addEventListener("click", () => {
-      element.classList.toggle(className);
+function toggleActive(clickedElement, addToggleClassTo, className) {
+  clickedElement.addEventListener("click", () => {
+    addToggleClassTo.classList.toggle(className);
+  });
+}
+// ---------------------------------------------------------------------------------------------------------------
+// Filter by swicher
+// ---------------------------------------------------------------------------------------------------------------
+function filterBySwicher(navLink, containerAllProducts, classNameCat) {
+  navLink.addEventListener("click", (_) => {
+    containerAllProducts.forEach((ele) => {
+      ele.classList.toggle("disabled");
+    });
+    classNameCat.forEach((ele) => {
+      ele.classList.toggle("show");
     });
   });
 }
-
 // ---------------------------------------------------------------------------------------------------------------
 // Play functions
 // ---------------------------------------------------------------------------------------------------------------
+onScroll(50, navContainer, navContainer, "sticky");
 handleClasses(tabs_howItWork, tabs_howItWork_content, "active");
-handleClasses(ListFAQ_categories, containerFAQ, "active");
 removeAllClassesAndAddClassToCurrentTarget(FAQitems, "open");
-animateOpacity(navgation, 500, 1); // fade in over 1 second
-toggleActive(toggles, "active");
-
-//  plannig to create filtertion swicher ....
-//  1- check when swicher if on result = on  else result = off
-//  2- add atrr to categoreis content and buttons
-//  3- try to use handleClasses fuction has same functionalty
+handleClasses(ListFAQ_categories, containerFAQ, "active");
+toggleActive(toggleMenu, navgation, "active"); // erorr

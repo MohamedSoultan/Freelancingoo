@@ -103,10 +103,10 @@
     backdrop-filter: blur(7px);
     position: absolute;
     top: 0;
-    right: -75px;
+    right: -15%;
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(232, 246, 230, 0.9);
     z-index: 998;
     flex-direction: column;
     row-gap: 24px;
@@ -121,7 +121,6 @@
   .navgation.active .containerUlNavigation {
     display: flex;
   }
-
 
   /* menu */
 
@@ -188,15 +187,23 @@
   .container_addProject {
     grid-template-columns: 1fr;
     column-gap: 24px;
+    width: 100%;
   }
   .container_cards {
     grid-template-columns: 1fr 1fr;
   }
-  .headRight_addProject {
-    display: flex;
+
+  .head-section {
+    grid-template-columns: 1fr;
   }
-  .headRight_addProject .toggles {
-    margin-top: 0;
+  .left_addProject  {
+    width: 100%;
+  }
+  .list_filter_addProject  {
+    margin-bottom: 32px;
+  }
+  .inputLogin, select {
+    max-width: 100%;
   }
 }
 @media (max-width: 578px) {
@@ -282,16 +289,12 @@
   .pagination {
     grid-template-columns: 1fr;
   }
-  .container_cards {
-    grid-template-columns: 1fr;
-  }
+
   .toggles {
     display: block;
   }
   .toggles .online_sellers {
     margin-bottom: 12px;
   }
-  .card_services_addProject {
-    max-width: 100%;
-  }
+
 }
