@@ -56,4 +56,4 @@ media
 
 # fix in FAQ generl button will editing (done)
 
-# add href to logo
+# add href to logo (done)

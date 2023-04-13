@@ -38,10 +38,11 @@ header {
 
 .logo {
   font-weight: bold;
-  font-size: 38px;
+  font-size: 40px;
   font-family: var(--primary--font);
   margin-bottom: 15px;
   z-index: 1001;
+  color: var(--mainColor) !important;
 }
 .orderList svg {
   color: var(--textColor);
@@ -459,8 +460,8 @@ select {
 
 .eyeInput {
   position: absolute;
-  right: 5px;
-  bottom: 3px;
+  right: 6px;
+  bottom: 6px;
 }
 .btnForm {
   background-color: var(--mainColor);
@@ -498,6 +499,8 @@ select {
 }
 .wrapper_container_cards {
   max-width: 110%;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 .right_addProject {
   overflow-x: scroll;
@@ -507,23 +510,16 @@ select {
   flex-direction: row;
   position: relative;
   column-gap: 24px;
-  padding-left: 24px;
 }
+
 .card_services_addProject {
   width: 250px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   transition: var(--transition);
   overflow: hidden;
   cursor: pointer;
 }
 
-/* .head-section {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  margin: 64px 0 48px;
-  column-gap: 65px;
-  margin-left: 64px;
-} */
 .addWorkBtn,
 .headRight_addProject {
   background-color: var(--backGroundSection);
@@ -532,7 +528,6 @@ select {
   padding: 12px;
   margin: 64px 0 32px;
 }
-
 
 .headRight_addProject {
   position: sticky;

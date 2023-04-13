@@ -46,29 +46,30 @@ const container_cards = Array.from(
 );
 // -- end
 // -- start
-const home = document.getElementById("home");
-const homeAr = document.getElementById("homeAr");
-const addProject = document.getElementById("addProject");
-const portfolio = document.getElementById("portfolio");
-const login = document.getElementById("login");
+var home = document.getElementById("home");
+var homeAr = document.getElementById("homeAr");
+var addProject = document.getElementById("addProject");
+var portfolio = document.getElementById("portfolio");
+var login = document.getElementById("login");
 // -- end
 if (home) {
-
+  handleClasses(tabs_howItWork, tabs_howItWork_content, "active");
+  removeAllClassesAndAddClassToCurrentTarget(FAQitems, "open");
+  handleClasses(ListFAQ_categories, containerFAQ, "active");
 }
 if (homeAr) {
 }
 if (addProject) {
-  filterBySwicher(swichPro, allProducts, proServceis); // erorr in main file
-  filterBySwicher(swichOnline, allProducts, OnSellers); // erorr in main file
   toggleActive(swichOnline, swichOnline, "active"); // erorr in main file
   toggleActive(swichPro, swichPro, "active"); // erorr in main file
+  filterBySwicher(swichOnline, container_cards, OnSellers);
+  filterBySwicher(swichPro, container_cards, proServceis);
 }
 if (portfolio) {
-  filterBySwicher(swichPro, allProducts, proServceis); // erorr in main file
-  filterBySwicher(swichOnline, allProducts, OnSellers); // erorr in main file
 }
 if (login) {
 }
+toggleActive(toggleMenu, navgation, "active"); // erorr
 
 // ---------------------------------------------------------------------------------------------------------------
 // Sticky navigtion
@@ -162,7 +163,3 @@ function moveContent(direction) {
 // Play functions
 // ---------------------------------------------------------------------------------------------------------------
 onScroll(50, navContainer, navContainer, "sticky");
-handleClasses(tabs_howItWork, tabs_howItWork_content, "active");
-removeAllClassesAndAddClassToCurrentTarget(FAQitems, "open");
-handleClasses(ListFAQ_categories, containerFAQ, "active");
-toggleActive(toggleMenu, navgation, "active"); // erorr

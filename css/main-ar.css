@@ -13,13 +13,14 @@ div {
   right: -40px;
 }
 
-img,.why img {
+img,
+.why img {
   transform: rotateY(180deg) !important;
 }
 .goto_href {
   position: absolute;
   padding: 10px 0 0 20px;
-  border-radius:  0 0  30px 0 ;
+  border-radius: 0 0 30px 0;
   bottom: -10px;
   left: 100% !important;
 }

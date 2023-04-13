@@ -293,12 +293,11 @@
   .typeAddProjectCards {
     margin-bottom: 24px;
   }
+  .pagintion {
+    display: none;
+  }
 }
 @media (max-width: 415px) {
-  .pagination {
-    grid-template-columns: 1fr;
-  }
-
   .toggles {
     display: block;
   }
