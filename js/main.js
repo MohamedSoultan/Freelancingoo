@@ -53,14 +53,19 @@ const portfolio = document.getElementById("portfolio");
 const login = document.getElementById("login");
 // -- end
 if (home) {
+
 }
 if (homeAr) {
 }
 if (addProject) {
+  filterBySwicher(swichPro, allProducts, proServceis); // erorr in main file
+  filterBySwicher(swichOnline, allProducts, OnSellers); // erorr in main file
   toggleActive(swichOnline, swichOnline, "active"); // erorr in main file
   toggleActive(swichPro, swichPro, "active"); // erorr in main file
 }
 if (portfolio) {
+  filterBySwicher(swichPro, allProducts, proServceis); // erorr in main file
+  filterBySwicher(swichOnline, allProducts, OnSellers); // erorr in main file
 }
 if (login) {
 }
@@ -160,7 +165,4 @@ onScroll(50, navContainer, navContainer, "sticky");
 handleClasses(tabs_howItWork, tabs_howItWork_content, "active");
 removeAllClassesAndAddClassToCurrentTarget(FAQitems, "open");
 handleClasses(ListFAQ_categories, containerFAQ, "active");
-filterBySwicher(swichPro, allProducts, proServceis); // erorr in main file
-filterBySwicher(swichOnline, allProducts, OnSellers); // erorr in main file
 toggleActive(toggleMenu, navgation, "active"); // erorr
-
