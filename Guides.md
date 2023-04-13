@@ -53,3 +53,5 @@ media
 # Fix error in portfolio section
 
 # Edit search bar in all screen and make him when i cilck on icon search open search bar and make it w-100 on the fly
+
+# fix in FAQ generl button will editing (done)
