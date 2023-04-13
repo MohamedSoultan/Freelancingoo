@@ -35,3 +35,21 @@ media
 
 1- hero serach
 2- filter with swich toggle
+
+### Erorrs
+
+# 1 edit probloem when i filter have many epmty space (done)
+
+# 2 .inputLogin, select overflow out of screen (done)
+
+# 3 margin left content need to edting in all screens (done)
+
+# 4 buttons nex perv need to positioned and handle position on all screens or change position (done)
+
+# 5 make flitertion above project cards
+
+# 6 make head of slider card project sticky or fixed (done)
+
+# Fix error in portfolio section
+
+# Edit search bar in all screen and make him when i cilck on icon search open search bar and make it w-100 on the fly

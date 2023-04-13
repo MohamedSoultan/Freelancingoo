@@ -187,23 +187,32 @@
   .container_addProject {
     grid-template-columns: 1fr;
     column-gap: 24px;
-    width: 100%;
+    margin-left: 48px;
+    /* width: 100%; */
   }
   .container_cards {
     grid-template-columns: 1fr 1fr;
   }
 
-  .head-section {
+  /* .head-section {
     grid-template-columns: 1fr;
-  }
-  .left_addProject  {
+  } */
+  .left_addProject {
     width: 100%;
+    padding-right: 48px;
   }
-  .list_filter_addProject  {
+  .headRight_addProject {
+    margin-right: 48px;
+  }
+  .list_filter_addProject {
     margin-bottom: 32px;
   }
-  .inputLogin, select {
+  .inputLogin,
+  select {
     max-width: 100%;
+  }
+  .pagintion {
+    justify-content: center;
   }
 }
 @media (max-width: 578px) {
@@ -296,5 +305,14 @@
   .toggles .online_sellers {
     margin-bottom: 12px;
   }
-
+  .head-section,
+  .container_addProject {
+    margin-left: 24px;
+  }
+  .left_addProject {
+    padding-right: 24px;
+  }
+  .headRight_addProject {
+    margin-right: 24px;
+  }
 }

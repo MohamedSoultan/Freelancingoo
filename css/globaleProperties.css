@@ -29,6 +29,17 @@ body {
   --mainHeading: 42px;
   --transition: all 0.3s ease;
 }
+::-webkit-scrollbar-thumb {
+  background: var(--mainColor);
+  border-radius: 12px;
+  width: 5px;
+  padding: 0 10px;
+}
+::-webkit-scrollbar {
+  background: #fff;
+  width: 12px;
+  border-radius: 12px;
+}
 .praimaryHeading {
   font-size: 48px;
   font-family: var(--primary--font);
@@ -89,7 +100,6 @@ li {
   border-radius: 50%;
   border: 3px solid var(--mainColor);
 }
-
 
 .disabled {
   display: none !important;

@@ -59,8 +59,6 @@ if (homeAr) {
 if (addProject) {
   toggleActive(swichOnline, swichOnline, "active"); // erorr in main file
   toggleActive(swichPro, swichPro, "active"); // erorr in main file
-  filterBySwicher(swichPro, allProducts, proServceis); // erorr in main file
-  filterBySwicher(swichOnline, allProducts, OnSellers); // erorr in main file
 }
 if (portfolio) {
 }
@@ -143,10 +141,26 @@ function filterBySwicher(navLink, containerAllProducts, classNameCat) {
   });
 }
 // ---------------------------------------------------------------------------------------------------------------
+// Next and previous buttons
+// ---------------------------------------------------------------------------------------------------------------
+
+function moveContent(direction) {
+  var container = document.querySelector(".right_addProject"); //id
+  var scrollAmount = container.offsetWidth / 3;
+  if (direction === "left") {
+    container.scrollLeft -= scrollAmount;
+  } else if (direction === "right") {
+    container.scrollLeft += scrollAmount;
+  }
+}
+// ---------------------------------------------------------------------------------------------------------------
 // Play functions
 // ---------------------------------------------------------------------------------------------------------------
 onScroll(50, navContainer, navContainer, "sticky");
 handleClasses(tabs_howItWork, tabs_howItWork_content, "active");
 removeAllClassesAndAddClassToCurrentTarget(FAQitems, "open");
 handleClasses(ListFAQ_categories, containerFAQ, "active");
+filterBySwicher(swichPro, allProducts, proServceis); // erorr in main file
+filterBySwicher(swichOnline, allProducts, OnSellers); // erorr in main file
 toggleActive(toggleMenu, navgation, "active"); // erorr
+

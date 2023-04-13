@@ -494,22 +494,49 @@ select {
   grid-template-columns: 300px 1fr;
   color: var(--textColor);
   column-gap: 64px;
-  overflow: hidden;
   margin-left: 64px;
 }
-.head-section {
+.wrapper_container_cards {
+  max-width: 110%;
+}
+.right_addProject {
+  overflow-x: scroll;
+}
+.container_cards {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  column-gap: 24px;
+  padding-left: 24px;
+}
+.card_services_addProject {
+  width: 250px;
+  margin-bottom: 24px;
+  transition: var(--transition);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* .head-section {
   display: grid;
   grid-template-columns: 300px 1fr;
   margin: 64px 0 48px;
   column-gap: 65px;
   margin-left: 64px;
-}
+} */
 .addWorkBtn,
 .headRight_addProject {
-  background-color: var(--mainTextColor);
+  background-color: var(--backGroundSection);
   border-radius: 8px;
   color: inherit;
   padding: 12px;
+  margin: 64px 0 32px;
+}
+
+
+.headRight_addProject {
+  position: sticky;
+  left: 0;
 }
 .titleFilter {
   font-weight: 500;
@@ -570,17 +597,6 @@ select {
   cursor: pointer;
 }
 
-.wrapper_container_cards {
-  overflow: hidden !important;
-  position: relative;
-}
-.wrapper_container_cards .container_cards {
-  display: flex;
-  position: relative;
-}
-.wrapper_container_cards .wrapper_card_project {
-  width: 250px;
-}
 .description_card_service {
   font-weight: 500;
   line-height: 1.2;
@@ -593,10 +609,11 @@ select {
 .nameFreelancer {
   font-weight: 500;
   line-height: 0.8;
-  font-size: 18px;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 .positionFreelancer {
-  font-size: 14px;
+  font-size: 12px;
   color: rgba(2, 17, 0, 0.7);
 }
 .freelancerInfo img {
@@ -604,52 +621,10 @@ select {
   height: 40px;
   width: 40px;
 }
-
-/* Pagination  */
-
-.btn_pagination {
-  border: 1px solid var(--mainColor);
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  background: none;
-  cursor: pointer;
-}
-
-.btn_pagination:hover {
+.pagintion button {
   background-color: var(--mainColor);
+  color: var(--mainTextColor);
 }
-
-.btn_pagination:hover .btn-icon {
-  stroke: #fff;
-}
-
-.btn-icon {
-  height: 24px;
-  width: 24px;
-  stroke: var(--mainColor);
-}
-
-.page-link:link,
-.page-link:visited {
-  font-size: 18px;
-  color: var(--textColor);
-  text-decoration: none;
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.page-link:hover,
-.page-link:active,
-.page-link.page-link--current {
-  background-color: var(--mainColor);
-  color: #fff;
-}
-
-.dots {
-  color: var(--textColor);
+.pagintion button:hover {
+  opacity: 0.8;
 }
